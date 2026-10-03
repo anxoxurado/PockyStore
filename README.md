@@ -1,6 +1,6 @@
 # PockyStore — Catálogo Offline con Vanilla JS
 
-Aplicación Web Progresiva (PWA) de una sola página que lista elementos obtenidos de una API pública y **funciona completamente sin conexión a internet**. Está desarrollada con HTML, CSS y JavaScript puro, sin frameworks ni librerías.
+Aplicación Web Progresiva (PWA) de una sola página que lista elementos obtenidos de una API pública y funciona completamente sin conexión a internet. Está desarrollada con HTML, CSS y JavaScript puro, sin frameworks ni librerías.
 
 - **Materia:** Aplicaciones Web Progresivas
 - **Universidad:** Universidad Tecnológica de Chihuahua (UTCH)
@@ -51,7 +51,7 @@ Se diseñó la estructura estática que carga al instante:
 - **Contenedor principal** con buscador y la cuadrícula del catálogo. Mientras llegan los datos se muestran *esqueletos de carga*, por lo que la vista nunca aparece vacía.
 - **Pie de página** fijo.
 
-El diseño es responsivo (cuadrícula adaptable) y usa variables CSS para los colores corporativos.
+El diseño es responsivo y usa CSS para los colores corporativos.
 
 ### 3. El Service Worker y la Caché (`sw.js`)
 
@@ -94,7 +94,7 @@ Estrategias de caché del evento `fetch`:
 
 ![Estrategias de caché](docs/img/03-estrategias-cache.png)
 
-> **Capturas de pantalla de la ejecución** (agregar en `docs/img/`):
+> **Capturas de pantalla de la ejecución** :
 >
 > ![Manifiesto en DevTools](docs/img/04-manifest-devtools.png)
 > ![Service Worker activo](docs/img/05-service-worker-activo.png)
@@ -121,14 +121,6 @@ npx serve .
 
 Después abre `http://localhost:8080`.
 
-### Despliegue en GitHub Pages
-
-1. Sube el proyecto a un repositorio de GitHub.
-2. Ve a **Settings → Pages**.
-3. En *Source* elige la rama `main` y la carpeta `/ (root)`.
-4. Abre la URL publicada (`https://<usuario>.github.io/<repositorio>/`).
-
----
 
 ## Cómo probar el funcionamiento offline
 
@@ -138,13 +130,12 @@ Después abre `http://localhost:8080`.
 4. Activa la casilla **Offline** (pestaña *Service Workers*) o la opción *Offline* en *Network*.
 5. Recarga la página: el App Shell y el catálogo siguen disponibles y el indicador muestra **Sin conexión**.
 6. En **Application → Manifest** puedes comprobar la configuración y usar el botón de instalación del navegador.
-
 ---
 
 ## Tecnologías
 
-HTML5 · CSS3 · JavaScript (ES6+) · Service Worker API · Cache API · Fetch API · Web App Manifest
+HTML5 · CSS3 · JavaScript · Service Worker API · Cache API · Fetch API · Web App Manifest
 
 ## Autor
 
-Angel — Grupo IDGS91N, Universidad Tecnológica de Chihuahua
+Angel Gael Jurado Rodríguez — Grupo IDGS101N, Universidad Tecnológica de Chihuahua
