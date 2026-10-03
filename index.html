@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#4f46e5">
+  <meta name="description" content="PockyStore: catálogo de productos que funciona sin conexión.">
+  <title>PockyStore</title>
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== APP SHELL: barra superior ===== -->
+  <header class="topbar">
+    <div class="topbar__brand">
+      <img class="topbar__logo" src="icons/icon-192.png" alt="" width="32" height="32">
+      <h1 class="topbar__title">PockyStore</h1>
+    </div>
+    <span id="connection-status" class="status status--online" role="status" aria-live="polite">En línea</span>
+  </header>
+
+  <!-- ===== APP SHELL: contenedor principal (contenido dinámico) ===== -->
+  <main class="main">
+    <div class="toolbar">
+      <input
+        id="search"
+        class="toolbar__search"
+        type="search"
+        placeholder="Buscar por nombre, empresa o ciudad..."
+        aria-label="Buscar en el catálogo"
+      >
+      <p id="source-info" class="toolbar__info"></p>
+    </div>
+
+    <div id="catalog" class="catalog" aria-busy="true">
+      <!-- Esqueletos de carga: el shell se ve al instante mientras llegan los datos -->
+      <div class="card card--skeleton"></div>
+      <div class="card card--skeleton"></div>
+      <div class="card card--skeleton"></div>
+      <div class="card card--skeleton"></div>
+    </div>
+
+    <p id="message" class="message" hidden></p>
+  </main>
+
+  <!-- ===== APP SHELL: pie de página ===== -->
+  <footer class="footer">
+    <p>PockyStore &middot; Aplicaciones Web Progresivas &middot; UTCH</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
